@@ -19,7 +19,7 @@ void kmain(void){
     */
     while(j < 80 * 25 * 2){
         /*set column to blank character*/
-        vidptr[j] = " ";
+        vidptr[j] = ' ';
         /*set attribute of character*/
         vidptr[j+1] = 0x07; // 0 denotes the background color of black, and 7 denotes the foreground as light grey
         j = j + 2; // increment the lcv
@@ -31,7 +31,7 @@ void kmain(void){
     /*
     this loop writes the actual string to video memory
     */
-    while(str[j] != "\0"){
+    while(str[j] != '\0'){
         // set element to character's ascii
         vidptr[i] = str[j]; // first byte set to character
         // set element attributes
